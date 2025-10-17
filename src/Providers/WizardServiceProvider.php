@@ -1,13 +1,13 @@
 <?php
 
-namespace meet-bhalodia\WizardInstaller\Providers;
+namespace MeetBhalodia\SetupWizard\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use meet-bhalodia\WizardInstaller\Http\Controllers\InstallationController;
-use meet-bhalodia\WizardInstaller\Http\Middleware\InstallationMiddleware;
-use meet-bhalodia\WizardInstaller\Console\Commands\InstallCommand;
-use meet-bhalodia\WizardInstaller\Console\Commands\UninstallCommand;
+use MeetBhalodia\SetupWizard\Http\Controllers\InstallationController;
+use MeetBhalodia\SetupWizard\Http\Middleware\InstallationMiddleware;
+use MeetBhalodia\SetupWizard\Console\Commands\InstallCommand;
+use MeetBhalodia\SetupWizard\Console\Commands\UninstallCommand;
 
 /**
  * Wizard Installer Service Provider
@@ -15,7 +15,7 @@ use meet-bhalodia\WizardInstaller\Console\Commands\UninstallCommand;
  * Registers all package components including routes, views, config,
  * middleware, and artisan commands for the Laravel installation wizard.
  */
-class WizardServiceProvider extends ServiceProvider
+class SetupWizardServiceProvider extends ServiceProvider
 {
     /**
      * Register services.
@@ -26,7 +26,7 @@ class WizardServiceProvider extends ServiceProvider
     {
         // Merge package config with application config
         $this->mergeConfigFrom(
-            __DIR__.'/../../config/wizard-installer.php',
+            __DIR__.'/../../config/setup-wizard.php',
             'wizard-installer'
         );
     }
@@ -45,11 +45,11 @@ class WizardServiceProvider extends ServiceProvider
 
         // Publish views with 'wizard-views' tag
         $this->publishes([
-            __DIR__.'/../../resources/views' => resource_path('views/vendor/wizard-installer'),
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/setup-wizard'),
         ], 'wizard-views');
 
         // Load package views from resources/views
-        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'wizard-installer');
+        $this->loadViewsFrom(__DIR__.'/../../resources/views', 'setup-wizard');
 
         // Register installation middleware
         $this->app['router']->aliasMiddleware('wizard.installed', InstallationMiddleware::class);
@@ -75,9 +75,9 @@ class WizardServiceProvider extends ServiceProvider
     protected function registerRoutes(): void
     {
         Route::group([
-            'prefix' => config('wizard-installer.route_prefix', 'install'),
+            'prefix' => config('setup-wizard.route_prefix', 'install'),
             'middleware' => ['web'],
-            'namespace' => 'meet-bhalodia\\WizardInstaller\\Http\\Controllers',
+            'namespace' => 'MeetBhalodia\\SetupWizard\\Http\\Controllers',
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         });
