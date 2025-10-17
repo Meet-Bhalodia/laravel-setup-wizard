@@ -27,18 +27,18 @@
     },
     "autoload": {
         "psr-4": {
-            "meet-bhalodia\\WizardInstaller\\": "src/"
+            "MeetBhalodia\\SetupWizard\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "meet-bhalodia\\WizardInstaller\\Tests\\": "tests/"
+            "MeetBhalodia\\SetupWizard\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider"
+                "MeetBhalodia\\SetupWizard\\Providers\\SetupWizardServiceProvider"
             ]
         }
     },
