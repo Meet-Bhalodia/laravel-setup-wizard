@@ -1,6 +1,6 @@
 <?php
 
-namespace meet-bhalodia\WizardInstaller\Http\Controllers;
+namespace MeetBhalodia\SetupWizard\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
-use meet-bhalodia\WizardInstaller\Helpers\EnvironmentHelper;
-use meet-bhalodia\WizardInstaller\Helpers\DatabaseHelper;
-use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
+use MeetBhalodia\SetupWizard\Helpers\EnvironmentHelper;
+use MeetBhalodia\SetupWizard\Helpers\DatabaseHelper;
+use MeetBhalodia\SetupWizard\Helpers\FileHelper;
 
 /**
  * Installation Controller
  * 
- * Handles all steps of the Laravel installation wizard:
+ * Handles all steps of the Laravel setup wizard:
  * - Welcome screen with requirements check
  * - Environment configuration (.env file)
  * - Database connection testing and migrations
@@ -54,7 +54,7 @@ class InstallationController extends Controller
     {
         $requirements = $this->checkRequirements();
         
-        return view('wizard-installer::steps.welcome', compact('requirements'));
+        return view('setup-wizard::steps.welcome', compact('requirements'));
     }
 
     /**
@@ -62,7 +62,7 @@ class InstallationController extends Controller
      */
     public function environment(): View
     {
-        return view('wizard-installer::steps.environment');
+        return view('setup-wizard::steps.environment');
     }
 
     /**
@@ -96,7 +96,7 @@ class InstallationController extends Controller
      */
     public function database(): View
     {
-        return view('wizard-installer::steps.database');
+        return view('setup-wizard::steps.database');
     }
 
     /**
@@ -139,7 +139,7 @@ class InstallationController extends Controller
      */
     public function admin(): View
     {
-        return view('wizard-installer::steps.admin');
+        return view('setup-wizard::steps.admin');
     }
 
     /**
@@ -170,7 +170,7 @@ class InstallationController extends Controller
      */
     public function complete(): View
     {
-        return view('wizard-installer::steps.complete');
+        return view('setup-wizard::steps.complete');
     }
 
     /**
@@ -178,7 +178,7 @@ class InstallationController extends Controller
      */
     protected function checkRequirements(): array
     {
-        $requirements = config('wizard-installer.requirements');
+        $requirements = config('setup-wizard.requirements');
         $results = [];
 
         // Check PHP version

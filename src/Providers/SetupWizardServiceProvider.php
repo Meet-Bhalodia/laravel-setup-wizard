@@ -10,7 +10,7 @@ use MeetBhalodia\SetupWizard\Console\Commands\InstallCommand;
 use MeetBhalodia\SetupWizard\Console\Commands\UninstallCommand;
 
 /**
- * Wizard Installer Service Provider
+ * Setup Wizard Installer Service Provider
  * 
  * Registers all package components including routes, views, config,
  * middleware, and artisan commands for the Laravel installation wizard.
@@ -27,7 +27,7 @@ class SetupWizardServiceProvider extends ServiceProvider
         // Merge package config with application config
         $this->mergeConfigFrom(
             __DIR__.'/../../config/setup-wizard.php',
-            'wizard-installer'
+            'setup-wizard'
         );
     }
 
@@ -38,23 +38,23 @@ class SetupWizardServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Publish configuration with 'wizard-config' tag
+        // Publish configuration with 'setup-wizard-config' tag
         $this->publishes([
-            __DIR__.'/../../config/wizard-installer.php' => config_path('wizard-installer.php'),
-        ], 'wizard-config');
+            __DIR__.'/../../config/setup-wizard.php' => config_path('setup-wizard.php'),
+        ], 'setup-wizard-config');
 
-        // Publish views with 'wizard-views' tag
+        // Publish views with 'setup-wizard-views' tag
         $this->publishes([
             __DIR__.'/../../resources/views' => resource_path('views/vendor/setup-wizard'),
-        ], 'wizard-views');
+        ], 'setup-wizard-views');
 
         // Load package views from resources/views
         $this->loadViewsFrom(__DIR__.'/../../resources/views', 'setup-wizard');
 
-        // Register installation middleware
-        $this->app['router']->aliasMiddleware('wizard.installed', InstallationMiddleware::class);
+        // Register setup middleware
+        $this->app['router']->aliasMiddleware('setup-wizard.installed', InstallationMiddleware::class);
 
-        // Register installation routes
+        // Register setup routes
         $this->registerRoutes();
 
         // Register artisan commands (only in console)

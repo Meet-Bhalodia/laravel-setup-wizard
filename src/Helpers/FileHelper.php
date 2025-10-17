@@ -1,6 +1,6 @@
 <?php
 
-namespace meet-bhalodia\WizardInstaller\Helpers;
+namespace MeetBhalodia\SetupWizard\Helpers;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
@@ -8,11 +8,11 @@ use Illuminate\Support\Facades\Storage;
 class FileHelper
 {
     /**
-     * Create installation lock file.
+     * Create setup lock file.
      */
     public function createInstallationLock(): void
     {
-        $lockFile = config('wizard-installer.lock_file');
+        $lockFile = config('setup-wizard.lock_file');
         $lockContent = json_encode([
             'installed_at' => now()->toISOString(),
             'version' => '1.0.0',
@@ -23,11 +23,11 @@ class FileHelper
     }
 
     /**
-     * Remove installation lock file.
+     * Remove setup lock file.
      */
     public function removeInstallationLock(): void
     {
-        $lockFile = config('wizard-installer.lock_file');
+        $lockFile = config('setup-wizard.lock_file');
         
         if (File::exists($lockFile)) {
             File::delete($lockFile);
@@ -35,20 +35,20 @@ class FileHelper
     }
 
     /**
-     * Check if installation is complete.
+     * Check if setup is complete.
      */
     public function isInstalled(): bool
     {
-        $lockFile = config('wizard-installer.lock_file');
+        $lockFile = config('setup-wizard.lock_file');
         return File::exists($lockFile);
     }
 
     /**
-     * Get installation information.
+     * Get setup information.
      */
     public function getInstallationInfo(): ?array
     {
-        $lockFile = config('wizard-installer.lock_file');
+        $lockFile = config('setup-wizard.lock_file');
         
         if (!File::exists($lockFile)) {
             return null;

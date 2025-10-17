@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use meet-bhalodia\WizardInstaller\Http\Controllers\InstallationController;
+use MeetBhalodia\SetupWizard\Http\Controllers\InstallationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +14,7 @@ use meet-bhalodia\WizardInstaller\Http\Controllers\InstallationController;
 |
 */
 
-Route::middleware(['wizard.installed'])->group(function () {
+Route::middleware(['setup-wizard.installed'])->group(function () {
     // Step 1: Welcome - System requirements check
     Route::get('/', [InstallationController::class, 'welcome'])
         ->name('install.welcome');

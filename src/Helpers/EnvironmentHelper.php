@@ -1,6 +1,6 @@
 <?php
 
-namespace meet-bhalodia\WizardInstaller\Helpers;
+namespace MeetBhalodia\SetupWizard\Helpers;
 
 use Illuminate\Support\Facades\File;
 
@@ -45,7 +45,7 @@ class EnvironmentHelper
      */
     protected function createDefaultEnvFile(): void
     {
-        $defaultEnv = "APP_NAME=Laravel
+        $defaultEnv = "APP_NAME=Setup Wizard
 APP_ENV=local
 APP_KEY=
 APP_DEBUG=true

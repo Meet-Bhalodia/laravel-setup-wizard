@@ -1,6 +1,6 @@
 <?php
 
-namespace meet-bhalodia\WizardInstaller\Http\Middleware;
+namespace MeetBhalodia\SetupWizard\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Installation Middleware
  * 
- * Prevents access to the installation wizard if the app is already installed.
+ * Prevents access to the setup wizard if the app is already installed.
  * Checks for the existence of the lock file (storage/installed by default).
  */
 class InstallationMiddleware
@@ -23,7 +23,7 @@ class InstallationMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         // Get the lock file path from config
-        $lockFile = config('wizard-installer.lock_file');
+        $lockFile = config('setup-wizard.lock_file');
         
         // If installation is complete (lock file exists), redirect away from installer
         if (File::exists($lockFile)) {
