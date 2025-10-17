@@ -1,9 +1,9 @@
 <?php
 
-namespace YourName\WizardInstaller\Console\Commands;
+namespace meet-bhalodia\WizardInstaller\Console\Commands;
 
 use Illuminate\Console\Command;
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 class UninstallCommand extends Command
 {

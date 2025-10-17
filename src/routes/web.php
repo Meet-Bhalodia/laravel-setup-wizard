@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use YourName\WizardInstaller\Http\Controllers\InstallationController;
+use meet-bhalodia\WizardInstaller\Http\Controllers\InstallationController;
 
 /*
 |--------------------------------------------------------------------------

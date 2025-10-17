@@ -25,7 +25,7 @@ A modern, browser-based installation wizard for Laravel applications. This packa
 
 1. **Install the package via Composer:**
    ```bash
-   composer require yourname/laravel-wizard-installer
+   composer require meet-bhalodia/laravel-setup-wizard
    ```
 
 2. **Publish the configuration and views:**
@@ -50,7 +50,7 @@ To test the package locally before publishing:
    ```bash
    # Example structure:
    # /home/user/projects/
-   #   ├── laravel-wizard-installer/  (this package)
+   #   ├── laravel-setup-wizard/  (this package)
    #   └── my-laravel-app/            (test application)
    ```
 
@@ -60,7 +60,7 @@ To test the package locally before publishing:
        "repositories": [
            {
                "type": "path",
-               "url": "../laravel-wizard-installer"
+               "url": "../laravel-setup-wizard"
            }
        ]
    }
@@ -68,7 +68,7 @@ To test the package locally before publishing:
 
 3. **Require the package with `@dev` flag:**
    ```bash
-   composer require yourname/laravel-wizard-installer @dev
+   composer require meet-bhalodia/laravel-setup-wizard @dev
    ```
 
 4. **The package will be symlinked, allowing real-time development:**
@@ -155,7 +155,7 @@ The `InstallationMiddleware` automatically redirects users away from the install
 **Important**: After installation, you should remove the installer package for security:
 
 ```bash
-composer remove yourname/laravel-wizard-installer
+composer remove meet-bhalodia/laravel-setup-wizard
 ```
 
 ## Customization Examples
@@ -211,7 +211,7 @@ composer remove yourname/laravel-wizard-installer
 #### EnvironmentHelper
 
 ```php
-use YourName\WizardInstaller\Helpers\EnvironmentHelper;
+use meet-bhalodia\WizardInstaller\Helpers\EnvironmentHelper;
 
 $helper = new EnvironmentHelper();
 
@@ -229,7 +229,7 @@ $helper->generateAppKey();
 #### DatabaseHelper
 
 ```php
-use YourName\WizardInstaller\Helpers\DatabaseHelper;
+use meet-bhalodia\WizardInstaller\Helpers\DatabaseHelper;
 
 $helper = new DatabaseHelper();
 
@@ -254,7 +254,7 @@ $user = $helper->createAdminUser([
 #### FileHelper
 
 ```php
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 $helper = new FileHelper();
 

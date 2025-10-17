@@ -48,8 +48,8 @@ By participating in this project, you agree to:
 
 2. **Clone your fork**
    ```bash
-   git clone https://github.com/YOUR-USERNAME/laravel-wizard-installer.git
-   cd laravel-wizard-installer
+   git clone https://github.com/YOUR-USERNAME/laravel-setup-wizard.git
+   cd laravel-setup-wizard
    ```
 
 3. **Install dependencies**
@@ -72,7 +72,7 @@ By participating in this project, you agree to:
        "repositories": [
            {
                "type": "path",
-               "url": "../laravel-wizard-installer"
+               "url": "../laravel-setup-wizard"
            }
        ]
    }
@@ -80,7 +80,7 @@ By participating in this project, you agree to:
    
    Then install:
    ```bash
-   composer require yourname/laravel-wizard-installer @dev
+   composer require meet-bhalodia/laravel-setup-wizard @dev
    ```
 
 6. **Create a feature branch**
@@ -97,10 +97,10 @@ This project follows [PSR-12](https://www.php-fig.org/psr/psr-12/) coding standa
 ```php
 <?php
 
-namespace YourName\WizardInstaller\Example;
+namespace meet-bhalodia\WizardInstaller\Example;
 
 use Illuminate\Support\Facades\File;
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 /**
  * Example Class
@@ -218,9 +218,9 @@ composer test-coverage
 #### Feature Tests
 
 ```php
-namespace YourName\WizardInstaller\Tests\Feature;
+namespace meet-bhalodia\WizardInstaller\Tests\Feature;
 
-use YourName\WizardInstaller\Tests\TestCase;
+use meet-bhalodia\WizardInstaller\Tests\TestCase;
 
 class NewFeatureTest extends TestCase
 {
@@ -238,10 +238,10 @@ class NewFeatureTest extends TestCase
 #### Unit Tests
 
 ```php
-namespace YourName\WizardInstaller\Tests\Unit;
+namespace meet-bhalodia\WizardInstaller\Tests\Unit;
 
-use YourName\WizardInstaller\Tests\TestCase;
-use YourName\WizardInstaller\Helpers\NewHelper;
+use meet-bhalodia\WizardInstaller\Tests\TestCase;
+use meet-bhalodia\WizardInstaller\Helpers\NewHelper;
 
 class NewHelperTest extends TestCase
 {
@@ -371,7 +371,7 @@ Only maintainers can create releases:
 ## Questions?
 
 - 📧 **Email:** your.email@example.com
-- 💬 **Issues:** [GitHub Issues](https://github.com/yourname/laravel-wizard-installer/issues)
+- 💬 **Issues:** [GitHub Issues](https://github.com/meet-bhalodia/laravel-setup-wizard/issues)
 - 📖 **Docs:** [README.md](README.md)
 
 ---

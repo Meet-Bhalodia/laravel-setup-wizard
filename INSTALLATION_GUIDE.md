@@ -43,7 +43,7 @@ The following directories must be writable:
 ### Step 1: Install via Composer
 
 ```bash
-composer require yourname/laravel-wizard-installer
+composer require meet-bhalodia/laravel-setup-wizard
 ```
 
 The package will be auto-discovered by Laravel thanks to the service provider configuration.
@@ -130,7 +130,7 @@ For local development and testing:
        "repositories": [
            {
                "type": "path",
-               "url": "../laravel-wizard-installer"
+               "url": "../laravel-setup-wizard"
            }
        ]
    }
@@ -138,7 +138,7 @@ For local development and testing:
 
 3. **Install the package:**
    ```bash
-   composer require yourname/laravel-wizard-installer @dev
+   composer require meet-bhalodia/laravel-setup-wizard @dev
    ```
 
 4. **Publish configuration:**
@@ -247,7 +247,7 @@ php artisan db:wipe
 
 1. **Remove the installer package (recommended):**
    ```bash
-   composer remove yourname/laravel-wizard-installer
+   composer remove meet-bhalodia/laravel-setup-wizard
    ```
 
 2. **Or keep it but ensure lock file exists:**
@@ -280,7 +280,7 @@ To completely remove the installer:
 php artisan wizard:uninstall
 
 # Remove package
-composer remove yourname/laravel-wizard-installer
+composer remove meet-bhalodia/laravel-setup-wizard
 
 # Remove published files (optional)
 rm config/wizard-installer.php

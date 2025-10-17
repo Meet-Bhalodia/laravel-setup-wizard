@@ -1,6 +1,6 @@
 <?php
 
-namespace YourName\WizardInstaller\Helpers;
+namespace meet-bhalodia\WizardInstaller\Helpers;
 
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;

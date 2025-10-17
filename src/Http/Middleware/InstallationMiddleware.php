@@ -1,6 +1,6 @@
 <?php
 
-namespace YourName\WizardInstaller\Http\Middleware;
+namespace meet-bhalodia\WizardInstaller\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;

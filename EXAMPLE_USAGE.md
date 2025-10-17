@@ -101,7 +101,7 @@ Success! Your application is installed.
 ### Checking Installation Status
 
 ```php
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 $fileHelper = new FileHelper();
 
@@ -115,7 +115,7 @@ if ($fileHelper->isInstalled()) {
 ### Getting Installation Information
 
 ```php
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 $fileHelper = new FileHelper();
 $info = $fileHelper->getInstallationInfo();
@@ -131,7 +131,7 @@ $info = $fileHelper->getInstallationInfo();
 ### Manually Updating Environment
 
 ```php
-use YourName\WizardInstaller\Helpers\EnvironmentHelper;
+use meet-bhalodia\WizardInstaller\Helpers\EnvironmentHelper;
 
 $envHelper = new EnvironmentHelper();
 
@@ -146,7 +146,7 @@ $envHelper->updateEnvironment([
 ### Testing Database Connection
 
 ```php
-use YourName\WizardInstaller\Helpers\DatabaseHelper;
+use meet-bhalodia\WizardInstaller\Helpers\DatabaseHelper;
 
 $dbHelper = new DatabaseHelper();
 
@@ -169,7 +169,7 @@ try {
 ### Creating Users Programmatically
 
 ```php
-use YourName\WizardInstaller\Helpers\DatabaseHelper;
+use meet-bhalodia\WizardInstaller\Helpers\DatabaseHelper;
 
 $dbHelper = new DatabaseHelper();
 
@@ -304,7 +304,7 @@ Route::post('/email', [InstallationController::class, 'processEmail'])
 
 ```php
 // After installation, initialize tenant
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 if ((new FileHelper())->isInstalled()) {
     // Setup tenant

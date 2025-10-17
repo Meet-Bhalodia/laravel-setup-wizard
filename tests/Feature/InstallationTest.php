@@ -1,8 +1,8 @@
 <?php
 
-namespace YourName\WizardInstaller\Tests\Feature;
+namespace meet-bhalodia\WizardInstaller\Tests\Feature;
 
-use YourName\WizardInstaller\Tests\TestCase;
+use meet-bhalodia\WizardInstaller\Tests\TestCase;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class InstallationTest extends TestCase

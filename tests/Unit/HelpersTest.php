@@ -1,11 +1,11 @@
 <?php
 
-namespace YourName\WizardInstaller\Tests\Unit;
+namespace meet-bhalodia\WizardInstaller\Tests\Unit;
 
-use YourName\WizardInstaller\Tests\TestCase;
-use YourName\WizardInstaller\Helpers\FileHelper;
-use YourName\WizardInstaller\Helpers\EnvironmentHelper;
-use YourName\WizardInstaller\Helpers\DatabaseHelper;
+use meet-bhalodia\WizardInstaller\Tests\TestCase;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\EnvironmentHelper;
+use meet-bhalodia\WizardInstaller\Helpers\DatabaseHelper;
 use Illuminate\Support\Facades\File;
 
 class HelpersTest extends TestCase

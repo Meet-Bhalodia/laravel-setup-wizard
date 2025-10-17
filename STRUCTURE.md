@@ -3,7 +3,7 @@
 Complete directory structure and file organization of the Laravel Wizard Installer package.
 
 ```
-laravel-wizard-installer/
+laravel-setup-wizard/
 │
 ├── config/
 │   └── wizard-installer.php          # Main configuration file
@@ -305,12 +305,12 @@ Check: File::exists(lock_file)
 {
     "autoload": {
         "psr-4": {
-            "YourName\\WizardInstaller\\": "src/"
+            "meet-bhalodia\\WizardInstaller\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "YourName\\WizardInstaller\\Tests\\": "tests/"
+            "meet-bhalodia\\WizardInstaller\\Tests\\": "tests/"
         }
     }
 }
@@ -323,7 +323,7 @@ Check: File::exists(lock_file)
     "extra": {
         "laravel": {
             "providers": [
-                "YourName\\WizardInstaller\\Providers\\WizardServiceProvider"
+                "meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider"
             ]
         }
     }

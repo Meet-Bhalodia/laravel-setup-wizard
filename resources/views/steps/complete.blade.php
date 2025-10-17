@@ -117,7 +117,7 @@
                             The installer routes are now disabled, but it's recommended to completely remove the package.
                         </p>
                         <p class="mt-2">
-                            Run: <code class="bg-yellow-100 px-2 py-1 rounded text-xs">composer remove yourname/laravel-wizard-installer</code>
+                            Run: <code class="bg-yellow-100 px-2 py-1 rounded text-xs">composer remove meet-bhalodia/laravel-setup-wizard</code>
                         </p>
                     </div>
                 </div>

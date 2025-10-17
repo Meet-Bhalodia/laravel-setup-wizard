@@ -1,9 +1,9 @@
 <?php
 
-namespace YourName\WizardInstaller\Console\Commands;
+namespace meet-bhalodia\WizardInstaller\Console\Commands;
 
 use Illuminate\Console\Command;
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 class InstallCommand extends Command
 {
@@ -33,13 +33,13 @@ class InstallCommand extends Command
 
         // Publish configuration
         $this->call('vendor:publish', [
-            '--provider' => 'YourName\\WizardInstaller\\Providers\\WizardServiceProvider',
+            '--provider' => 'meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider',
             '--tag' => 'config',
         ]);
 
         // Publish views
         $this->call('vendor:publish', [
-            '--provider' => 'YourName\\WizardInstaller\\Providers\\WizardServiceProvider',
+            '--provider' => 'meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider',
             '--tag' => 'views',
         ]);
 

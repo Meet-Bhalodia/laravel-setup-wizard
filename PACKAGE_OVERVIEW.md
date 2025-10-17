@@ -10,7 +10,7 @@ A modern, browser-based installation wizard for Laravel 9+ applications built wi
 
 | Property | Value |
 |----------|-------|
-| **Package Name** | `meet-bhalodia/laravel-wizard-installer` |
+| **Package Name** | `meet-bhalodia/laravel-setup-wizard` |
 | **Namespace** | `meet-bhalodia\WizardInstaller` |
 | **PHP Version** | 8.2+ |
 | **Laravel Version** | 9.0+, 10.0+, 11.0+ |
@@ -113,7 +113,7 @@ php artisan vendor:publish --tag=wizard-views
 ## 📁 Complete File Structure
 
 ```
-laravel-wizard-installer/
+laravel-setup-wizard/
 │
 ├── 📄 Documentation (9 files)
 │   ├── README.md                      # Main documentation
@@ -186,7 +186,7 @@ laravel-wizard-installer/
 
 ### Install Package
 ```bash
-composer require yourname/laravel-wizard-installer
+composer require meet-bhalodia/laravel-setup-wizard
 ```
 
 ### Publish Assets
@@ -207,13 +207,13 @@ http://your-domain.com/install
     "repositories": [
         {
             "type": "path",
-            "url": "../laravel-wizard-installer"
+            "url": "../laravel-setup-wizard"
         }
     ]
 }
 
 # Install with dev flag
-composer require yourname/laravel-wizard-installer @dev
+composer require meet-bhalodia/laravel-setup-wizard @dev
 ```
 
 ---
@@ -330,7 +330,7 @@ Excellent for Laravel packages/projects:
 {
     "autoload": {
         "psr-4": {
-            "YourName\\WizardInstaller\\": "src/"
+            "meet-bhalodia\\WizardInstaller\\": "src/"
         }
     }
 }
@@ -342,7 +342,7 @@ Excellent for Laravel packages/projects:
     "extra": {
         "laravel": {
             "providers": [
-                "YourName\\WizardInstaller\\Providers\\WizardServiceProvider"
+                "meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider"
             ]
         }
     }
@@ -391,7 +391,7 @@ laravel new test-app
 # Edit composer.json to add path repository
 
 # 3. Install package
-composer require yourname/laravel-wizard-installer @dev
+composer require meet-bhalodia/laravel-setup-wizard @dev
 
 # 4. Publish & test
 php artisan vendor:publish --tag=wizard-config
@@ -412,7 +412,7 @@ php artisan serve
 ### Post-Installation
 1. **Remove package (recommended):**
    ```bash
-   composer remove yourname/laravel-wizard-installer
+   composer remove meet-bhalodia/laravel-setup-wizard
    ```
 
 2. **Or keep locked:**
@@ -476,9 +476,9 @@ This package is open-sourced software licensed under the [MIT license](LICENSE).
 - 🏗️ [Package Structure](STRUCTURE.md)
 
 ### Community
-- 🐛 [Report Issues](https://github.com/yourname/laravel-wizard-installer/issues)
-- 💬 [Discussions](https://github.com/yourname/laravel-wizard-installer/discussions)
-- ⭐ [Star on GitHub](https://github.com/yourname/laravel-wizard-installer)
+- 🐛 [Report Issues](https://github.com/meet-bhalodia/laravel-setup-wizard/issues)
+- 💬 [Discussions](https://github.com/meet-bhalodia/laravel-setup-wizard/discussions)
+- ⭐ [Star on GitHub](https://github.com/meet-bhalodia/laravel-setup-wizard)
 
 ### Contact
 - 📧 Email: your.email@example.com

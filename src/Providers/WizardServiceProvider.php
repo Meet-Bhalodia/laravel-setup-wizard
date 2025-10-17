@@ -1,13 +1,13 @@
 <?php
 
-namespace YourName\WizardInstaller\Providers;
+namespace meet-bhalodia\WizardInstaller\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Route;
-use YourName\WizardInstaller\Http\Controllers\InstallationController;
-use YourName\WizardInstaller\Http\Middleware\InstallationMiddleware;
-use YourName\WizardInstaller\Console\Commands\InstallCommand;
-use YourName\WizardInstaller\Console\Commands\UninstallCommand;
+use meet-bhalodia\WizardInstaller\Http\Controllers\InstallationController;
+use meet-bhalodia\WizardInstaller\Http\Middleware\InstallationMiddleware;
+use meet-bhalodia\WizardInstaller\Console\Commands\InstallCommand;
+use meet-bhalodia\WizardInstaller\Console\Commands\UninstallCommand;
 
 /**
  * Wizard Installer Service Provider
@@ -77,7 +77,7 @@ class WizardServiceProvider extends ServiceProvider
         Route::group([
             'prefix' => config('wizard-installer.route_prefix', 'install'),
             'middleware' => ['web'],
-            'namespace' => 'YourName\\WizardInstaller\\Http\\Controllers',
+            'namespace' => 'meet-bhalodia\\WizardInstaller\\Http\\Controllers',
         ], function () {
             $this->loadRoutesFrom(__DIR__.'/../../routes/web.php');
         });

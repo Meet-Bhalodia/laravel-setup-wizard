@@ -1,6 +1,6 @@
 <?php
 
-namespace YourName\WizardInstaller\Http\Controllers;
+namespace meet-bhalodia\WizardInstaller\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
-use YourName\WizardInstaller\Helpers\EnvironmentHelper;
-use YourName\WizardInstaller\Helpers\DatabaseHelper;
-use YourName\WizardInstaller\Helpers\FileHelper;
+use meet-bhalodia\WizardInstaller\Helpers\EnvironmentHelper;
+use meet-bhalodia\WizardInstaller\Helpers\DatabaseHelper;
+use meet-bhalodia\WizardInstaller\Helpers\FileHelper;
 
 /**
  * Installation Controller

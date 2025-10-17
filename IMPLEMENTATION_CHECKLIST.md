@@ -249,7 +249,7 @@ Complete checklist of all implemented features for Laravel Wizard Installer pack
 ### Testing Instructions ✅
 ```bash
 # 1. Setup documented ✅
-composer require yourname/laravel-wizard-installer @dev
+composer require meet-bhalodia/laravel-setup-wizard @dev
 
 # 2. Publish commands ✅
 php artisan vendor:publish --tag=wizard-config

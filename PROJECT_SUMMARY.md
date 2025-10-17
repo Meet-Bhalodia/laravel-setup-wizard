@@ -4,8 +4,8 @@
 
 A modern, browser-based installation wizard package for Laravel 9+ applications, built with PHP 8.2+ and TailwindCSS.
 
-**Package Name:** `yourname/laravel-wizard-installer`  
-**Namespace:** `YourName\WizardInstaller`  
+**Package Name:** `meet-bhalodia/laravel-setup-wizard`  
+**Namespace:** `meet-bhalodia\WizardInstaller`  
 **Version:** 1.0.0  
 **License:** MIT
 
@@ -155,7 +155,7 @@ php artisan vendor:publish --tag=wizard-views
 ## 📁 Complete File Structure
 
 ```
-laravel-wizard-installer/
+laravel-setup-wizard/
 ├── config/
 │   └── wizard-installer.php              ✅ Configuration
 │
@@ -249,13 +249,13 @@ cd test-app
     "repositories": [
         {
             "type": "path",
-            "url": "../laravel-wizard-installer"
+            "url": "../laravel-setup-wizard"
         }
     ]
 }
 
 # 3. Install package
-composer require yourname/laravel-wizard-installer @dev
+composer require meet-bhalodia/laravel-setup-wizard @dev
 
 # 4. Publish assets
 php artisan vendor:publish --tag=wizard-config
@@ -356,7 +356,7 @@ php artisan serve
 
 ```json
 {
-    "name": "yourname/laravel-wizard-installer",
+    "name": "meet-bhalodia/laravel-setup-wizard",
     "type": "library",
     "require": {
         "php": "^8.2",
@@ -364,13 +364,13 @@ php artisan serve
     },
     "autoload": {
         "psr-4": {
-            "YourName\\WizardInstaller\\": "src/"
+            "meet-bhalodia\\WizardInstaller\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "YourName\\WizardInstaller\\Providers\\WizardServiceProvider"
+                "meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider"
             ]
         }
     }
@@ -381,10 +381,10 @@ php artisan serve
 
 ```bash
 # From Packagist (when published)
-composer require yourname/laravel-wizard-installer
+composer require meet-bhalodia/laravel-setup-wizard
 
 # From local path (development)
-composer require yourname/laravel-wizard-installer @dev
+composer require meet-bhalodia/laravel-setup-wizard @dev
 ```
 
 ---

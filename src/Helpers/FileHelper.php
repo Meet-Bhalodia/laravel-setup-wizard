@@ -1,6 +1,6 @@
 <?php
 
-namespace YourName\WizardInstaller\Helpers;
+namespace meet-bhalodia\WizardInstaller\Helpers;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;

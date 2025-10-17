@@ -7,7 +7,7 @@ Get up and running with Laravel Wizard Installer in 5 minutes!
 ### Step 1: Install the Package
 
 ```bash
-composer require yourname/laravel-wizard-installer
+composer require meet-bhalodia/laravel-setup-wizard
 ```
 
 ### Step 2: Publish Assets
@@ -39,7 +39,7 @@ Edit `composer.json`:
     "repositories": [
         {
             "type": "path",
-            "url": "../laravel-wizard-installer"
+            "url": "../laravel-setup-wizard"
         }
     ]
 }
@@ -48,7 +48,7 @@ Edit `composer.json`:
 ### Step 3: Install Package
 
 ```bash
-composer require yourname/laravel-wizard-installer @dev
+composer require meet-bhalodia/laravel-setup-wizard @dev
 ```
 
 ### Step 4: Prepare for Installation
@@ -130,7 +130,7 @@ return [
 ### Remove the Installer (Recommended)
 
 ```bash
-composer remove yourname/laravel-wizard-installer
+composer remove meet-bhalodia/laravel-setup-wizard
 ```
 
 ### Or Keep It (Secure)

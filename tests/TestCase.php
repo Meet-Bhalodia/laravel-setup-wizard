@@ -1,9 +1,9 @@
 <?php
 
-namespace YourName\WizardInstaller\Tests;
+namespace meet-bhalodia\WizardInstaller\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-use YourName\WizardInstaller\Providers\WizardServiceProvider;
+use meet-bhalodia\WizardInstaller\Providers\WizardServiceProvider;
 
 abstract class TestCase extends Orchestra
 {

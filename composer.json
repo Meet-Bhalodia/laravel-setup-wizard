@@ -1,13 +1,13 @@
 {
-    "name": "meet-bhalodia/laravel-wizard-installer",
+    "name": "meet-bhalodia/laravel-setup-wizard",
     "description": "A modern browser-based installation wizard for Laravel 9+ applications",
     "type": "library",
     "keywords": ["laravel", "installer", "wizard", "installation", "setup"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "your.email@example.com"
+            "name": "Meet Bhalodia",
+            "email": "meet.wrteam@gmail.com"
         }
     ],
     "require": {
@@ -27,18 +27,18 @@
     },
     "autoload": {
         "psr-4": {
-            "YourName\\WizardInstaller\\": "src/"
+            "meet-bhalodia\\WizardInstaller\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "YourName\\WizardInstaller\\Tests\\": "tests/"
+            "meet-bhalodia\\WizardInstaller\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "YourName\\WizardInstaller\\Providers\\WizardServiceProvider"
+                "meet-bhalodia\\WizardInstaller\\Providers\\WizardServiceProvider"
             ]
         }
     },
@@ -46,6 +46,6 @@
         "test": "phpunit",
         "test-coverage": "phpunit --coverage-html coverage"
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
