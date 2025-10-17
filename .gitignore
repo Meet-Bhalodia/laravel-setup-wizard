@@ -1,0 +1,43 @@
+# --------------------------------------------------------------------
+# Laravel Setup Wizard - .gitignore
+# --------------------------------------------------------------------
+
+# Composer dependencies
+/vendor/
+composer.lock
+
+# Node dependencies (if you add frontend build tools later)
+node_modules/
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Laravel or testing artifacts
+.env
+.env.*
+.env.backup
+/storage/
+bootstrap/cache/
+
+# PHPUnit / Pest coverage
+.phpunit.result.cache
+coverage/
+.clover
+
+# IDE / Editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Mac / OS generated files
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
+
+# Local test package installs
+/vendor-test/
